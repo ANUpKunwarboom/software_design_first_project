@@ -1,0 +1,36 @@
+<input id="firstnumberinput" type="number" placeholder="firstnumber">
+<input id="secondnumberinput" type="number" placeholder="secondnumber">
+<button onclick="add()">ADD</button>
+<button onclick="sub()">SUB</button>
+<script>
+    var firstNumberDom =document.getElementById("firstnumberinput");
+    
+    var secondNumberDom =document.getElementById("secondnumberinput");
+
+
+    function add(){
+        let firstvalue = Number(firstNumberDom.value);
+        let secondvalue = Number(secondNumberDom.value);
+
+        let sum = firstvalue+secondvalue;
+
+        firstNumberDom.value=sum;
+        secondNumberDom.value='';
+        secondNumberDom.focus();
+
+    }
+
+
+    function sub(){
+        let firstvalue = Number(firstNumberDom.value);
+        let secondvalue = Number(secondNumberDom.value);
+
+        let sum = firstvalue-secondvalue;
+
+        firstNumberDom.value=sum;
+        secondNumberDom.value='';
+        secondNumberDom.focus();
+
+    }
+
+</script>

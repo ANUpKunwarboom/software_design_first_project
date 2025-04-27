@@ -1,0 +1,68 @@
+<input type="number" autocomplete="off" id="FirstNumber" placeholder="first number">
+<input type="number" autocomplete="off" id="SecondNumber" placeholder="second number"><br><br>
+<output id="result"></output><br><br>
+<button type="button" onclick="displaysum()">add</button>
+<button type="button" onclick="displaysub()">sum</button>
+<button type="button" onclick="displaymul()">mul</button>
+<button type="button" onclick="displaydiv()">div</button>
+<script>
+    function displaysub() {
+        let a, b;
+        a = parseFloat(document.getElementById("FirstNumber").value);
+        b = parseFloat(document.getElementById("SecondNumber").value);
+        if (isNaN(a) || isNaN(b)) {
+        document.getElementById("result").innerHTML = "Please enter any numbers.";
+    } else {
+        let sum = a - b;
+        document.getElementById("result").innerHTML = sum;
+        document.getElementById("FirstNumber").value = sum;   
+        document.getElementById("SecondNumber").value = "";
+        document.getElementById("SecondNumber").focus();
+    }
+    }
+// abc
+    function displaysub() {
+        let a, b;
+        a = parseFloat(document.getElementById("FirstNumber").value);
+        b = parseFloat(document.getElementById("SecondNumber").value);
+        if (isNaN(a) || isNaN(b)) {
+        document.getElementById("result").innerHTML = "Please enter any numbers.";
+    } else {
+        let sum = a - b;
+        document.getElementById("result").innerHTML = sum;
+        document.getElementById("FirstNumber").value = sum;   
+        document.getElementById("SecondNumber").value = "";
+        document.getElementById("SecondNumber").focus();
+    }
+    }
+
+    function displaymul() {
+        let a, b;
+        a = parseFloat(document.getElementById("FirstNumber").value);
+        b = parseFloat(document.getElementById("SecondNumber").value);
+        if (isNaN(a) || isNaN(b)) {
+        document.getElementById("result").innerHTML = "Please enter any numbers.";
+    } else {
+        let mul = a * b;
+        document.getElementById("result").innerHTML = mul;
+        document.getElementById("FirstNumber").value = mul;   
+        document.getElementById("SecondNumber").value = "";
+        document.getElementById("SecondNumber").focus();
+    }
+    }
+
+    function displaydiv() {
+        let a, b;
+        a = parseFloat(document.getElementById("FirstNumber").value);
+        b = parseFloat(document.getElementById("SecondNumber").value);
+        if (isNaN(a) || isNaN(b)) {
+        document.getElementById("result").innerHTML = "Please enter any numbers.";
+    } else {
+        let div = a / b;
+        document.getElementById("result").innerHTML = div;
+        document.getElementById("FirstNumber").value = div;   
+        document.getElementById("SecondNumber").value = "";
+        document.getElementById("SecondNumber").focus();
+    }
+    }
+</script>
